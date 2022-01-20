@@ -1,25 +1,20 @@
 var date = moment().format('dddd , MMMM do YYYY, h:mm a');
 $("#currentDay").html(date);
 
-var event = {}
 
+var text = "";
 
 var saveEvent = function() {
-    localStorage.setItem("event", JSON.stringify(tasks));
-
-
+    
     $(".saveBtn").on("click", function(){
-   
         
+        var text = $(".description").val();
+        localStorage.setItem("text", JSON.stringify(text,));
+
     })
   };
 
-saveEvent(event);
+saveEvent(text,);
 
 
-// var event = {};
-
-// var saveEvent = function() {
-  //  localStorage.setItem("event", JSON.stringify(event));
-//}
 
